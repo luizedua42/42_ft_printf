@@ -6,7 +6,7 @@
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:53:49 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/07 13:01:43 by luizedua         ###   ########.fr       */
+/*   Updated: 2023/06/07 13:08:17 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	ft_printf(const char *input, ...)
 
 	i = 0;
 	ret =  0;
+	if (input == NULL)
+		return	(-1);
 	va_start(arg_lst, input);
 	while (input[i] != '\0')
 	{
