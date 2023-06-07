@@ -1,7 +1,7 @@
 
-#include "libftprintf.h"
+#include <stdio.h>
 
 int main ()
 {
-	ft_printf("teste: %c ", 'a');
+	printf("teste: %x", -1234);
 }

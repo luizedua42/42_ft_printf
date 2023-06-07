@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putnbr_base_up.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 13:54:59 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/06 23:14:21 by luizedua         ###   ########.fr       */
+/*   Created: 2023/06/06 21:32:03 by luizedua          #+#    #+#             */
+/*   Updated: 2023/06/06 23:19:50 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
-# include <stdlib.h>
-# include <stdarg.h>
-# include <unistd.h>
+#include "libftprintf.h"
 
-int		ft_printf(const char *input, ...);
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_putnbr_base_low(unsigned int nb);
-void	ft_putnbr_base_up(unsigned int nb);
-void	ft_put_uns_nbr(unsigned int nb);
+void	ft_putnbr_base_low(unsigned int nb)
+{
+	static const char	hex[] = "0123456789ABCDEF";
 
-
-
-#endif
+	if (nb < 0)
+		nb = nb * (-1);
+	if (nb >= 16)
+		ft_putnbr_base_low(nb / 16);
+	write (1, &hex[nb % 16], 1);
+}

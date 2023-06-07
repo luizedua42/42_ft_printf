@@ -6,16 +6,11 @@
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:54:02 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/06 17:18:10 by luizedua         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:20:29 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-static void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "libftprintf.h"
 
 void	ft_putnbr(int nb)
 {

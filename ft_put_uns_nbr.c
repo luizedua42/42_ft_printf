@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_put_uns_nbr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 13:54:59 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/06 23:14:21 by luizedua         ###   ########.fr       */
+/*   Created: 2023/06/06 23:12:02 by luizedua          #+#    #+#             */
+/*   Updated: 2023/06/06 23:19:17 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
-# include <stdlib.h>
-# include <stdarg.h>
-# include <unistd.h>
+#include "libftprintf.h"
 
-int		ft_printf(const char *input, ...);
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_putnbr_base_low(unsigned int nb);
-void	ft_putnbr_base_up(unsigned int nb);
-void	ft_put_uns_nbr(unsigned int nb);
+void	ft_put_uns_nbr(unsigned int nb)
+{
+	char	a;
 
-
-
-#endif
+	a = 0;
+	if (nb < 0)
+	{
+		nb = nb * (-1);
+		ft_put_uns_nbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_put_uns_nbr(nb / 10);
+		ft_put_uns_nbr(nb % 10);
+	}
+	else
+	{
+		a = '0' + nb % 10;
+		ft_putchar(a);
+	}
+}
