@@ -6,17 +6,21 @@
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:37:45 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/06 23:20:19 by luizedua         ###   ########.fr       */
+/*   Updated: 2023/06/07 12:25:05 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
+	int ret;
+
+	ret =  0;
 	while (*s)
 	{
-		ft_putchar(*s);
+		ret +=  ft_putchar(*s);
 		s++;
 	}
+	return (ret);
 }

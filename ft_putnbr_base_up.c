@@ -6,15 +6,19 @@
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 21:32:03 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/07 11:33:31 by luizedua         ###   ########.fr       */
+/*   Updated: 2023/06/07 12:27:32 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putnbr_base_low(unsigned int nb)
+int	ft_putnbr_base_up(unsigned int nb)
 {
+	int ret;
+
+	ret =  0;
 	if (nb >= 16)
-		ft_putnbr_base_low(nb / 16);
-	write (1, &HEX_UPP[nb % 16], 1);
+		ret += ft_putnbr_base_up(nb / 16);
+	ret +=  (int)write(1, &HEX_UPP[nb % 16], 1);
+	return (ret);
 }

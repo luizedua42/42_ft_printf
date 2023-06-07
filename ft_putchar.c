@@ -6,13 +6,14 @@
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:27:37 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/06 23:20:46 by luizedua         ###   ########.fr       */
+/*   Updated: 2023/06/07 12:15:10 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
