@@ -6,7 +6,7 @@
 /*   By: luizedua <luizedua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:54:59 by luizedua          #+#    #+#             */
-/*   Updated: 2023/06/07 12:13:48 by luizedua         ###   ########.fr       */
+/*   Updated: 2023/06/07 13:38:45 by luizedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # define HEX_LOW "0123456789abcdef"
 # define HEX_UPP "0123456789ABCDEF"
+
 int		ft_printf(const char *input, ...);
 int		ft_putnbr(int nb);
 int		ft_putchar(char c);
