@@ -6,7 +6,7 @@
 
 ## 42's third project as a cadet, recreate the well 	known printf from stdio library.
 
-![Alt text](.git/Screenshot%20from%202023-06-21%2017-37-33.png)
+![Alt text](.github/Screenshot%20from%202023-06-21%2017-37-33.png)
 
 <div align = center>
 
