@@ -4,7 +4,7 @@
 
 </div>
 
-## 42's third project as a cadet, recreate the well 	known printf from stdio library.
+### 42's third project as a cadet, recreate the well 	known printf from stdio library.
 
 ![Alt text](.github/Screenshot%20from%202023-06-21%2017-37-33.png)
 
